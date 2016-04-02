@@ -36,7 +36,7 @@ class program
         needed = ((wanted * 100)-(score * 50))/50;
         while (needed > 100)
         {
-            Console.Write("Sorry, you would need a " + needed + " on the next test. Please pick a new target score: ");
+            Console.Write("Sorry, you would need a {0} on the next test. Please pick a new target score: ", needed);
             wanted = int.Parse(Console.ReadLine());
             needed = ((wanted * 100)-(score * 50))/50;
             if (needed < 100)
@@ -50,7 +50,9 @@ class program
             
         }
        
-            Console.Write("Study hard, you need a " + needed + " on the next test. Good luck!");
+            Console.Write("Study hard, you need a {0} on the next test. Good luck!",needed);
+            Console.WriteLine("Press enter to close...");
+            Console.ReadLine();
         }
     }
 }
